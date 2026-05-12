@@ -4,6 +4,7 @@ import { ColorModeContext, useColorMode } from "./theme/ColorModeContext";
 import { AuthProvider } from "./auth/AuthContext";
 import ProtectedRoute from "./components/ProtectedRoute";
 import DashboardLayout from "./components/DashboardLayout";
+import TemplateRibbon from "./components/TemplateRibbon";
 import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Profile from "./pages/Profile";
@@ -20,6 +21,7 @@ const App = () => {
     <ColorModeContext.Provider value={colorMode}>
       <ThemeProvider theme={theme}>
         <CssBaseline />
+        <TemplateRibbon />
         <AuthProvider>
           <Routes>
             <Route path="/login" element={<Login />} />
